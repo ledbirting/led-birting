@@ -1,5 +1,5 @@
 // Remote data URL (screens.json). SAMPLE used as fallback if fetch fails.
-const DATA_URL = "https://raw.githubusercontent.com/ledbirting/ledbirting-bs-availability/refs/heads/main/public/screens.json";
+const DATA_URL = "screens.json";
 
 // Static resolution icon map
 const RES_ICONS = {
