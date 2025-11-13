@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="is">
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
   <meta charset="utf-8" />
   <title>LED Birting – Skjáraleit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- iframe-resizer content script (inside the iframe) -->
+  <script src="https://cdn.jsdelivr.net/npm/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
 </head>
 <body>
   <header class="filters">
     <div class="filters-left">
-      <div id="f-land" class="filter"></div>
-      <div id="f-borg" class="filter"></div>
-      <div id="f-building" class="filter"></div>
-      <div id="f-uppl" class="filter"></div>
-      <div id="f-or" class="filter"></div>
+      <div id="f-land" class="filter" data-type="multi" data-label="Landssvæði"></div>
+      <div id="f-borg" class="filter" data-type="multi" data-label="Borg/bær"></div>
+      <div id="f-building" class="filter" data-type="multi" data-label="Þjónusta"></div>
+      <div id="f-uppl" class="filter" data-type="multi" data-label="Upplausn"></div>
+      <div id="f-or" class="filter" data-type="multi" data-label="Orientation"></div>
     </div>
     <div class="filters-right">
-      <button id="reset-all" class="btn-reset" type="button">Reset all</button>
+      <button id="reset-all" class="btn-reset" type="button" aria-label="Hreinsa allar síur">
+        Reset all
+      </button>
     </div>
   </header>
 
   <main id="app"></main>
 
+  <!-- App logic -->
   <script src="app.js"></script>
 </body>
 </html>
